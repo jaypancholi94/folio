@@ -1,0 +1,49 @@
+---
+import Card from "../../../components/card/index.astro";
+import Body from "../atoms/body.astro";
+import Job from "../atoms/job.astro";
+import { JOBS } from "../../../utils/constants";
+import type { JobProps, ResponsibilityProps } from "../../../utils/types";
+import Divider from "../../../components/divider/index.astro";
+---
+
+<Card className="p-6 flex flex-col gap-3">
+  <h2 class="text-white font-sans text-lg md:text-2xl font-semibold">
+    Experience
+  </h2>
+  {
+    JOBS.map((job: JobProps, index: number) => (
+      <div>
+        <Job
+          companyHref={job.website}
+          companyName={job.company}
+          role={job.role}
+          linkHoverColor={job.linkHoverColor}
+          duration={job.duration}
+        >
+          {job.description.overview && (
+            <Body content={job.description?.overview} />
+          )}
+          {job.description.responsibilities.map(
+            (responsibility: ResponsibilityProps) => (
+              <div>
+                {responsibility?.title && (
+                  <Body
+                    content={responsibility.title}
+                    className="font-bold text-sm"
+                  />
+                )}
+                <ul class="list-disc list-outside">
+                  {responsibility.highlights.map((highlight: string) => (
+                    <li class="text-zinc-400 text-sm ml-5">{highlight}</li>
+                  ))}
+                </ul>
+              </div>
+            ),
+          )}
+        </Job>
+        {index + 1 !== JOBS.length && <Divider className="mt-6 mb-3" />}
+      </div>
+    ))
+  }
+</Card>

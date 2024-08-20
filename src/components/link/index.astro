@@ -1,0 +1,49 @@
+---
+import { icons } from "lucide-react";
+import Card from "../card/index.astro";
+interface Props {
+  iconName: keyof typeof icons;
+  iconPosition?: "prefix" | "postfix";
+  iconSize?: number;
+  iconStrokeWidth?: 1 | 2 | 3;
+  href?: string;
+  title: string;
+  target?: "_blank" | "_self";
+  className?: string;
+  isFullWidth?: boolean;
+}
+const {
+  iconName,
+  iconPosition,
+  href,
+  title,
+  className,
+  target,
+  iconSize = 16,
+  iconStrokeWidth = 1,
+  isFullWidth,
+} = Astro.props;
+const Icon = icons[iconName];
+---
+
+<a href={href} target={target} class={isFullWidth ? "w-full" : "w-fit"}>
+  <Card
+    className={`flex px-3 py-2 rounded-lg gap-1 !bg-neutral-800 ${className}`}
+  >
+    {
+      iconPosition === "prefix" && (
+        <Icon size={iconSize} className="text-current" />
+      )
+    }
+    <h4 class="text-sm font-bold text-current">{title}</h4>
+    {
+      iconPosition === "postfix" && (
+        <Icon
+          size={iconSize}
+          strokeWidth={iconStrokeWidth}
+          className="text-current"
+        />
+      )
+    }
+  </Card>
+</a>

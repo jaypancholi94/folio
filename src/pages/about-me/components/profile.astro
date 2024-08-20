@@ -1,0 +1,30 @@
+---
+import Card from "../../../components/card/index.astro";
+import Body from "../atoms/body.astro";
+import Link from "../../../components/link/index.astro";
+---
+
+<Card className="p-6 flex flex-col gap-6 " id="profile-wrapper">
+  <img src="/jay.jpeg" alt="avatar" class="w-full rounded-xl aspect-square" />
+  <h2 class="text-white font-sans text-lg md:text-2xl font-semibold">
+    Hey again!👋🏻
+  </h2>
+  <Body
+    content="👨‍💻 Software Developer with a Master of Information Technology from University. Experienced in front-end and back-end, CMS management, and UI/UX enhancements."
+  />
+  <Body content="🚀 Always learn, always improve." />
+  <div class="flex gap-3 flex-wrap">
+    <Link
+      iconName="MapPin"
+      iconPosition="prefix"
+      title="Melbourne"
+      className="text-zinc-400"
+    />
+    <Link
+      iconName="BriefcaseBusiness"
+      iconPosition="prefix"
+      title="Inlight"
+      className="text-zinc-400"
+    />
+  </div>
+</Card>

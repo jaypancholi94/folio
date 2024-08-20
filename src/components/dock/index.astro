@@ -1,0 +1,40 @@
+---
+import Card from "../card/index.astro";
+import { icons } from "lucide-react";
+import { DOCK_ICONS } from "../../utils/constants";
+import Icon from "./icon/index.astro";
+import Divider from "../divider/index.astro";
+
+const { pathname } = Astro.url;
+---
+
+<div class="fixed bottom-3 w-full flex justify-center">
+  <Card
+    className={"flex flex-row rounded-3xl gap-3 p-3 items-center animate-dock-load"}
+  >
+    {
+      DOCK_ICONS.map((icon) => {
+        if (icon.type === "divider") {
+          return (
+            <Divider
+              className={icon.className}
+              style={`animation-delay: ${icon.animationDelay};`}
+            />
+          );
+        }
+        return (
+          <Icon
+            isActive={!!(pathname === icon.path)}
+            bgColor={`${icon.bgColor}`}
+            href={`${icon.path}`}
+            tooltipText={`${icon.tooltip}`}
+            isExternalLink={icon.isExternalLink}
+            iconName={icon.icon as keyof typeof icons}
+            className={icon.className}
+            style={`animation-delay: ${icon.animationDelay};`}
+          />
+        );
+      })
+    }
+  </Card>
+</div>

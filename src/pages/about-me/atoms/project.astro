@@ -1,0 +1,60 @@
+---
+import Link from "../../../components/link/index.astro";
+import Pill from "../../../components/pill/index.astro";
+
+interface Props {
+  name: string;
+  preview: string;
+  github: string;
+  highlights: string[];
+  techStack: string[];
+}
+const { name, preview, github, highlights, techStack } = Astro.props;
+---
+
+<div class="flex flex-col gap-2">
+  <h3 class="text-white font-bold">{name}</h3>
+  <ul class="list-disc list-outside">
+    {
+      highlights.map((highlight: string) => (
+        <li class="text-zinc-400 text-sm ml-5">{highlight}</li>
+      ))
+    }
+  </ul>
+  <div class="flex gap-2">
+    <Link
+      iconName="ArrowUpRight"
+      iconPosition={"postfix"}
+      title={"GitHub"}
+      className={`text-white cursor-pointer w-fit transition-all duration-300 `}
+      iconStrokeWidth={2}
+      target="_blank"
+      iconSize={20}
+      href={github}
+    />
+    {
+      preview && (
+        <Link
+          iconName="ArrowUpRight"
+          iconPosition={"postfix"}
+          title={"Preview"}
+          className={`text-white cursor-pointer w-fit transition-all duration-300 `}
+          iconStrokeWidth={2}
+          target="_blank"
+          iconSize={20}
+          href={preview}
+        />
+      )
+    }
+  </div>
+  <h4 class="text-white font-bold">TechStack</h4>
+  <div class="flex flex-wrap gap-1">
+    {
+      techStack.map((tech: string) => (
+        <Pill>
+          <code class="text-zinc-400 text-sm">{tech}</code>
+        </Pill>
+      ))
+    }
+  </div>
+</div>

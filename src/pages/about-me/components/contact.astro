@@ -1,0 +1,29 @@
+---
+import Card from "../../../components/card/index.astro";
+import Link from "../../../components/link/index.astro";
+import { CONTACTS } from "../../../utils/constants";
+import type { ContactProps } from "../../../utils/types";
+---
+
+<Card className="p-6 flex flex-col gap-3">
+  <h2 class="text-white font-sans text-lg md:text-2xl font-semibold">
+    Come and say hi!
+  </h2>
+  <div class="grid grid-cols-2 gap-3">
+    {
+      CONTACTS.map((contact: ContactProps) => (
+        <Link
+          iconName={contact.iconName}
+          iconPosition={"prefix"}
+          title={contact.title}
+          className={`text-white cursor-pointer  transition-all duration-300 w-full ${contact.hoverColor} px-5 py-4`}
+          iconStrokeWidth={2}
+          target="_blank"
+          iconSize={20}
+          href={contact.href}
+          isFullWidth={true}
+        />
+      ))
+    }
+  </div>
+</Card>

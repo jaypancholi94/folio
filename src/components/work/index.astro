@@ -1,0 +1,62 @@
+---
+import Card from "../card/index.astro";
+import { COMPANY_PATHS } from "../../utils/constants.ts";
+import TAC from "./companies/tac.astro";
+import Solstice from "./companies/solstice.astro";
+import MakeaWish from "./companies/make-a-wish.astro";
+import Amplar from "./companies/amplar.astro";
+import Nandos from "./companies/nandos.astro";
+import Inlight from "./companies/inlight.astro";
+import Swinburne from "./companies/swinburne.astro";
+import Whitefox from "./companies/whitefox.astro";
+---
+
+<div
+  class="w-screen h-screen flex flex-col justify-center items-center relative container m-auto"
+>
+  <h2 class="text-white font-sans text-xl md:text-4xl font-semibold mb-8">
+    You may seen me or my work on ...
+  </h2>
+  <div
+    class="grid md:grid-cols-3 grid-cols-2 md:gap-4 gap-8 justify-items-center"
+  >
+    <a href={COMPANY_PATHS.tac} target="_blank">
+      <TAC className="md:h-16 h-12  w-auto fill-white" />
+    </a>
+    <a href={COMPANY_PATHS.solstice} target="_blank">
+      <Solstice className="md:h-16 h-12 w-auto fill-[#9646ff]" />
+    </a>
+    <a href={COMPANY_PATHS.makeawish} target="_blank">
+      <MakeaWish className="md:h-16 h-12 w-auto fill-[#0055b7]" />
+    </a>
+    <a href={COMPANY_PATHS.vicinity} target="_blank">
+      <img
+        src={"./public/company/vicinity.png"}
+        alt="vicinity"
+        class="md:h-16 h-12 w-auto"
+      />
+    </a>
+    <a href={COMPANY_PATHS.amplar} target="_blank">
+      <Amplar className="md:h-16 h-12 w-auto" />
+    </a>
+    <a href={COMPANY_PATHS.nandos} target="_blank">
+      <Nandos className="md:h-16 h-12 w-auto" />
+    </a>
+    <a href={COMPANY_PATHS.inlight} target="_blank">
+      <Inlight className="md:h-16 h-12 w-auto" />
+    </a>
+    <a href={COMPANY_PATHS.whitefox} target="_blank">
+      <Whitefox className="md:h-16 h-12 w-full" />
+    </a>
+    <a href={COMPANY_PATHS["my-little-tag"]} target="_blank">
+      <img
+        src={"./public/company/my-little-tag.png"}
+        alt="vicinity"
+        class="md:h-16 h-12 w-auto"
+      />
+    </a>
+    <a href={COMPANY_PATHS.swinburne} target="_blank">
+      <Swinburne className="md:h-16 h-12 w-auto" />
+    </a>
+  </div>
+</div>

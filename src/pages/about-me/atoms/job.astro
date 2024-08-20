@@ -1,0 +1,32 @@
+---
+import Link from "../../../components/link/index.astro";
+
+interface Props {
+  companyHref?: string;
+  companyName: string;
+  linkHoverColor?: string;
+  role: string;
+  duration: string;
+}
+const { companyHref, companyName, role, duration, linkHoverColor } =
+  Astro.props;
+---
+
+<div class="flex flex-col gap-2">
+  <Link
+    iconName="ArrowUpRight"
+    iconPosition={companyHref ? "postfix" : undefined}
+    title={companyName}
+    className={`text-white cursor-pointer w-fit transition-all duration-300 ${linkHoverColor}`}
+    iconStrokeWidth={2}
+    target="_blank"
+    iconSize={20}
+    href={companyHref}
+  />
+  <div class="flex gap-3">
+    <h3 class="text-white font-bold">{role}</h3>
+    <h3 class="text-white">•</h3>
+    <h3 class="text-white font-bold">{duration}</h3>
+  </div>
+  <slot />
+</div>

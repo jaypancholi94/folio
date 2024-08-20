@@ -1,0 +1,48 @@
+---
+import Card from "../card/index.astro";
+import Roles from "../roles/index.astro";
+import { ArrowUpRight } from "lucide-react";
+---
+
+<div
+  class="w-screen h-screen flex flex-col justify-center items-center relative animate-page-load"
+>
+  <Card
+    className="items-center md:gap-4 gap-3 flex flex-col flex-wrap h-min w-auto p-3 md:p-6 relative "
+  >
+    <div class="flex flex-nowrap items-center gap-1">
+      <h2 class="text-white font-sans text-xl md:text-4xl font-semibold">
+        Bello, I'm
+      </h2>
+      <div class="flex bg-purple h-min px-2 py-1 rounded-xl items-center">
+        <h2 class="text-white font-sans text-xl md:text-4xl font-semibold">
+          Jay Pancholi
+        </h2>
+        <img alt="memoji" src={"/memoji-face.png"} class="h-9 w-9" />
+      </div>
+    </div><div class="flex flex-nowrap items-center gap-1">
+      <h2 class="text-white font-sans text-xl md:text-4xl font-semibold">
+        I'm a
+      </h2>
+      <div class="flex items-center">
+        <Roles
+          className="text-white font-sans text-xl md:text-4xl font-semibold"
+        />
+      </div>
+    </div>
+    <div class="flex flex-nowrap items-center gap-1">
+      <h2 class="text-white font-sans text-xl md:text-4xl font-semibold">
+        Currently at
+      </h2>
+      <div class="flex bg-orange-400 h-min px-2 py-1 rounded-xl items-center">
+        <a
+          class="text-white font-sans text-xl md:text-4xl font-semibold cursor-pointer"
+          href="https://inlight.com.au"
+        >
+          Inlight
+        </a>
+        <ArrowUpRight className="text-white" size={28} strokeWidth={2} />
+      </div>
+    </div>
+  </Card>
+</div>

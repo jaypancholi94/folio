@@ -1,0 +1,21 @@
+---
+import Card from "../../../components/card/index.astro";
+import { PROJECTS } from "../../../utils/constants";
+import type { ProjectProps } from "../../../utils/types";
+import Divider from "../../../components/divider/index.astro";
+import Project from "../atoms/project.astro";
+---
+
+<Card className="p-6 flex flex-col gap-3">
+  <h2 class="text-white font-sans text-lg md:text-2xl font-semibold">
+    Projects
+  </h2>
+  {
+    PROJECTS.map((project: ProjectProps, index: number) => (
+      <div>
+        <Project {...project} />
+        {index + 1 !== PROJECTS.length && <Divider className="mt-6 mb-3" />}
+      </div>
+    ))
+  }
+</Card>

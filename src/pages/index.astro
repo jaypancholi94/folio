@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/layout/index.astro";
+import Sections from "../components/sections/index.astro";
+import Intro from "../components/intro/index.astro";
+import Work from "../components/work/index.astro";
+---
+
+<Layout title="Welcome to Jay." description="sdf">
+  <Sections backgroundColor="bg-black" nextSectionHref="/#work">
+    <Intro />
+  </Sections>
+  <Sections backgroundColor="bg-gray-950" id="work" prevSectionHref="/">
+    <Work />
+  </Sections>
+  <!-- <Sections backgroundColor="bg-stone-950">Page 2</Sections> -->
+</Layout>

@@ -1,0 +1,57 @@
+---
+import Card from "../../card/index.astro";
+import { icons, ArrowUpRight } from "lucide-react";
+
+interface Props {
+  isActive?: boolean;
+  bgColor: string;
+  className?: string;
+  href: string;
+  tooltipText: string;
+  isExternalLink?: boolean;
+  iconName: keyof typeof icons;
+  style?: string;
+}
+const {
+  isActive,
+  bgColor,
+  className,
+  href,
+  tooltipText,
+  isExternalLink,
+  iconName,
+  style,
+} = Astro.props;
+const iconContainer =
+  "relative group text-white p-3 border border-border rounded-xl cursor-pointer transition-all duration-500";
+const toolTipClassNames =
+  "absolute left-1/2 rounded-xl transform -translate-x-1/2 bottom-full mb-5 text-center text-sm py-1 px-2 translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-nowrap";
+
+const Icon = icons[iconName];
+---
+
+<a
+  class={`${iconContainer} ${className} ${isActive ? bgColor : ""} hover:${bgColor}`}
+  href={href}
+  target={isExternalLink ? "_blank" : "_self"}
+  style={style}
+>
+  <Icon />
+  <Card className={toolTipClassNames}>
+    <div class="flex">
+      <span class="text-gray-400">
+        {tooltipText}
+      </span>
+      {
+        isExternalLink && (
+          <ArrowUpRight className="text-white" size={17} strokeWidth={1} />
+        )
+      }
+    </div>
+  </Card>
+  {
+    isActive && (
+      <div class="absolute bg-[#ffffff1a] rounded-s-sm -bottom-2 left-1/2 w-4 -translate-x-1/2 h-[3px]" />
+    )
+  }
+</a>
