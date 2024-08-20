@@ -1,10 +1,10 @@
 ---
-import Link from "../../../components/link/index.astro";
-import Pill from "../../../components/pill/index.astro";
+import Link from '../../../components/link/index.astro';
+import Pill from '../../../components/pill/index.astro';
 
-interface Props {
+export interface Props {
   name: string;
-  preview: string;
+  preview?: string;
   github: string;
   highlights: string[];
   techStack: string[];
@@ -24,8 +24,8 @@ const { name, preview, github, highlights, techStack } = Astro.props;
   <div class="flex gap-2">
     <Link
       iconName="ArrowUpRight"
-      iconPosition={"postfix"}
-      title={"GitHub"}
+      iconPosition={'postfix'}
+      title={'GitHub'}
       className={`text-white cursor-pointer w-fit transition-all duration-300 `}
       iconStrokeWidth={2}
       target="_blank"
@@ -36,8 +36,8 @@ const { name, preview, github, highlights, techStack } = Astro.props;
       preview && (
         <Link
           iconName="ArrowUpRight"
-          iconPosition={"postfix"}
-          title={"Preview"}
+          iconPosition={'postfix'}
+          title={'Preview'}
           className={`text-white cursor-pointer w-fit transition-all duration-300 `}
           iconStrokeWidth={2}
           target="_blank"
