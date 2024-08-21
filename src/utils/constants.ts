@@ -3,7 +3,7 @@ import type { ContactProps, JobProps, ProjectProps } from "./types";
 export const PATHS = {
   home: "/",
   projects: "/projects",
-  "about-me": "/about-me",
+  about: "/about",
   mailto: "mailto:jaypancholi94@gmail.com",
   github: "https://github.com/jaypancholi94",
   linkedin: "https://www.linkedin.com/in/jay-pancholi/",
@@ -47,7 +47,7 @@ export const DOCK_ICONS = [
     animationDelay: "350ms",
   },
   {
-    path: PATHS["about-me"],
+    path: PATHS.about,
     bgColor: "bg-blue-700",
     className: "hover:bg-blue-700 animate-icon-load opacity-0",
     tooltip: "About Me",
