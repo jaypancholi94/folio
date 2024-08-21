@@ -35,11 +35,18 @@ export default {
           "0%": { opacity: "0", transform: "scale(0)" },
           "100%": { opacity: "1", transform: "scale(1)" },
         },
+        "cauldron-bubble": {
+          "0%": { transform: "translateY(0)", opacity: "0" },
+          "20%": { opacity: "0.8" },
+          "80%": { opacity: "0.3" },
+          "100%": { transform: "translateY(-0.5rem)", opacity: "0" },
+        },
       },
       animation: {
         "page-load": "page-load 0.6s ease-out forwards",
         "dock-load": "dock-load 0.4s ease-out forwards",
         "icon-load": "dock-load 0.5s ease-out forwards",
+        "cauldron-bubble": "cauldron-bubble 3s infinite",
       },
     },
   },
