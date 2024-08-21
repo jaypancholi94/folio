@@ -2,8 +2,8 @@ import type { ContactProps, JobProps, ProjectProps } from "./types";
 
 export const PATHS = {
   home: "/",
-  projects: "/projects",
-  about: "/about",
+  projects: "/projects/",
+  about: "/about/",
   mailto: "mailto:jaypancholi94@gmail.com",
   github: "https://github.com/jaypancholi94",
   linkedin: "https://www.linkedin.com/in/jay-pancholi/",
