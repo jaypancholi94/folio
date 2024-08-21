@@ -11,10 +11,15 @@ import Whitefox from "./companies/whitefox.astro";
 ---
 
 <div
-  class="w-screen h-screen flex flex-col justify-center items-center relative container m-auto"
+  class="w-screen h-screen flex flex-col justify-center items-center relative container m-auto md:px-0 px-6"
 >
-  <h2 class="text-white font-sans text-xl md:text-4xl font-semibold mb-8">
-    You may seen me or my work on ...
+  <h2 class="text-white
+  font-sans
+  text-xl
+  md:text-4xl
+  font-semibold
+  mb-8">
+    You might have come across me or my work on...
   </h2>
   <div
     class="grid md:grid-cols-3 grid-cols-2 md:gap-4 gap-8 justify-items-center"
@@ -30,7 +35,7 @@ import Whitefox from "./companies/whitefox.astro";
     </a>
     <a href={COMPANY_PATHS.vicinity} target="_blank">
       <img
-        src={"./public/company/vicinity.png"}
+        src={"./company/vicinity.png"}
         alt="vicinity"
         class="md:h-16 h-12 w-auto"
       />
@@ -49,8 +54,8 @@ import Whitefox from "./companies/whitefox.astro";
     </a>
     <a href={COMPANY_PATHS["my-little-tag"]} target="_blank">
       <img
-        src={"./public/company/my-little-tag.png"}
-        alt="vicinity"
+        src={"./company/my-little-tag.png"}
+        alt="my-little-tag"
         class="md:h-16 h-12 w-auto"
       />
     </a>

@@ -42,7 +42,9 @@ import Divider from "../../../components/divider/index.astro";
             ),
           )}
         </Job>
-        {index + 1 !== JOBS.length && <Divider className="mt-6 mb-3" />}
+        {index + 1 !== JOBS.length && (
+          <Divider className="mt-6 mb-3 h-[2px] w-full" />
+        )}
       </div>
     ))
   }

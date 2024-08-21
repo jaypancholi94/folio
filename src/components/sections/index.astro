@@ -1,5 +1,6 @@
 ---
 import { ChevronDown, ChevronUp } from "lucide-react";
+import Background from "../background/index.astro";
 interface Props {
   backgroundColor?: string;
   id?: string;
@@ -15,38 +16,28 @@ const { backgroundColor, id, nextSectionHref, prevSectionHref } = Astro.props;
   style={{ backgroundColor }}
   id={id}
 >
-  <div class="relative h-full w-full">
-    <div class="absolute top-0 left-0 right-0 bottom-0 z-0">
-      <img
-        src={"/background.png"}
-        alt={"background image"}
-        class="block w-full h-full object-center object-cover opacity-40"
-        style={{ imageRendering: "auto" }}
-      />
-    </div>
-    <div class="absolute top-0 left-0 right-0 bottom-0 z-0"></div>
-    <div class="absolute h-screen w-screen max-h-[-webkit-fill-available]">
-      <slot />
-    </div>
-  </div>
-  {
-    nextSectionHref && (
-      <a
-        class="cursor-pointer absolute border border-border hover:border-white text-border hover:text-white transition-all rounded-full bottom-3 right-10 w-8 h-8 z-20 duration-300 animate-bounce flex justify-center items-center scroll-smooth"
-        href={nextSectionHref}
-      >
-        <ChevronDown className="w-7 h-7" strokeWidth={1} />
-      </a>
-    )
-  }
-  {
-    prevSectionHref && (
-      <a
-        class="cursor-pointer absolute border border-border hover:border-white text-border hover:text-white transition-all rounded-full top-5 right-10 w-8 h-8 z-20 duration-300 animate-bounce flex justify-center items-center"
-        href={prevSectionHref}
-      >
-        <ChevronUp className="w-7 h-7" strokeWidth={1} />
-      </a>
-    )
-  }
+  <Background>
+    <slot />
+  </Background>
 </section>
+
+{
+  !!nextSectionHref && (
+    <a
+      class="cursor-pointer absolute border border-border hover:border-white text-border hover:text-white transition-all rounded-full bottom-3 right-10 w-8 h-8 z-20 duration-300 animate-bounce flex justify-center items-center scroll-smooth"
+      href={nextSectionHref}
+    >
+      <ChevronDown className="w-7 h-7" strokeWidth={1} />
+    </a>
+  )
+}
+{
+  !!prevSectionHref && (
+    <a
+      class="cursor-pointer absolute border border-border hover:border-white text-border hover:text-white transition-all rounded-full top-5 right-10 w-8 h-8 z-20 duration-300 animate-bounce flex justify-center items-center"
+      href={prevSectionHref}
+    >
+      <ChevronUp className="w-7 h-7" strokeWidth={1} />
+    </a>
+  )
+}

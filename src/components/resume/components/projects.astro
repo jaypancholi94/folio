@@ -1,7 +1,7 @@
 ---
 import Card from "../../../components/card/index.astro";
 import { PROJECTS } from "../../../utils/constants";
-import Divider from "../../../components/divider/index.astro";
+import Divider from "../../divider/index.astro";
 import Project from "../../../components/resume/atoms/project.astro";
 ---
 
@@ -20,7 +20,9 @@ import Project from "../../../components/resume/atoms/project.astro";
           techStack={project.techStack}
         />
 
-        {index + 1 !== PROJECTS.length && <Divider className="mt-6 mb-3" />}
+        {index + 1 !== PROJECTS.length && (
+          <Divider className="mt-6 mb-3 h-[2px] w-full" />
+        )}
       </div>
     ))
   }

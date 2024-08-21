@@ -2,7 +2,7 @@ import type { ContactProps, JobProps, ProjectProps } from "./types";
 
 export const PATHS = {
   home: "/",
-  project: "/project",
+  projects: "/projects",
   "about-me": "/about-me",
   mailto: "mailto:jaypancholi94@gmail.com",
   github: "https://github.com/jaypancholi94",
@@ -37,7 +37,7 @@ export const DOCK_ICONS = [
     animationDelay: "300ms",
   },
   {
-    path: PATHS.project,
+    path: PATHS.projects,
     bgColor: "bg-orange-400",
     className: "hover:bg-orange-400 animate-icon-load opacity-0",
     tooltip: "Project",
