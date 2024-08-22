@@ -1,4 +1,4 @@
-import type { ContactProps, JobProps, ProjectProps } from "./types";
+import type { ContactProps, JobProps, ProjectProps, SkillGroup } from "./types";
 
 export const PATHS = {
   home: "/",
@@ -50,7 +50,7 @@ export const DOCK_ICONS = [
     path: PATHS.about,
     bgColor: "bg-blue-700",
     className: "hover:bg-blue-700 animate-icon-load opacity-0",
-    tooltip: "About Me",
+    tooltip: "About",
     icon: "CircleUserRound",
     type: "icon",
     isExternalLink: false,
@@ -355,4 +355,80 @@ export const CONTACTS: ContactProps[] = [
   },
 ];
 
-export const SKILLS = { frontend: [] };
+export const SKILLS: SkillGroup[] = [
+  {
+    name: "Front End",
+    categories: [
+      {
+        tooltip: "JavaScript Frameworks",
+        skills: ["TypeScript", "React", "Next.js", "Astro", "React Native"],
+      },
+      {
+        tooltip: "UI",
+        skills: ["StoryBook"],
+      },
+      {
+        tooltip: "Testing",
+        skills: ["Unit Testing", "Jest", "Vitest", "Cypress"],
+      },
+      {
+        tooltip: "Style",
+        skills: ["Tailwind", "Vanilla Extract", "MUI", "Styled System", "CSS"],
+      },
+      {
+        tooltip: "State Management",
+        skills: ["Mobx", "Redux", "React Context"],
+      },
+    ],
+  },
+  {
+    name: "Back End",
+    categories: [
+      {
+        tooltip: "Node Framework",
+        skills: ["Express.js"],
+      },
+      { tooltip: "Languages", skills: ["PHP", "JAVA"] },
+      {
+        tooltip: "CMS",
+        skills: ["Sanity", "WordPress", "Craft"],
+      },
+      {
+        tooltip: "Databases",
+        skills: ["SQL", "MongoDB"],
+      },
+    ],
+  },
+  {
+    name: "DevOps",
+    categories: [
+      {
+        tooltip: "CI/CD",
+        skills: ["Vercel", "GitHub Actions"],
+      },
+      {
+        tooltip: "Version Control",
+        skills: ["Git"],
+      },
+    ],
+  },
+  {
+    name: "Tools",
+    categories: [
+      {
+        tooltip: "Design",
+        skills: ["Figma"],
+      },
+      {
+        tooltip: "Project Management",
+        skills: ["Jira", "ClickUp", "Trello"],
+      },
+      {
+        tooltip: "IDE",
+        skills: ["nvim", "VS Code", "Submlime"],
+      },
+    ],
+  },
+];
+
+export const SOFTWARE_OF_CHOICE = "";

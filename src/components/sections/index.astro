@@ -19,25 +19,24 @@ const { backgroundColor, id, nextSectionHref, prevSectionHref } = Astro.props;
   <Background>
     <slot />
   </Background>
+  {
+    !!nextSectionHref && (
+      <a
+        class="cursor-pointer absolute border border-border hover:border-white text-border hover:text-white transition-all rounded-full bottom-3 right-10 w-8 h-8 z-20 duration-300 animate-bounce flex justify-center items-center scroll-smooth"
+        href={nextSectionHref}
+      >
+        <ChevronDown className="w-7 h-7" strokeWidth={1} />
+      </a>
+    )
+  }
+  {
+    !!prevSectionHref && (
+      <a
+        class="cursor-pointer absolute border border-border hover:border-white text-border hover:text-white transition-all rounded-full top-5 right-10 w-8 h-8 z-20 duration-300 animate-bounce flex justify-center items-center"
+        href={prevSectionHref}
+      >
+        <ChevronUp className="w-7 h-7" strokeWidth={1} />
+      </a>
+    )
+  }
 </section>
-
-{
-  !!nextSectionHref && (
-    <a
-      class="cursor-pointer absolute border border-border hover:border-white text-border hover:text-white transition-all rounded-full bottom-3 right-10 w-8 h-8 z-20 duration-300 animate-bounce flex justify-center items-center scroll-smooth"
-      href={nextSectionHref}
-    >
-      <ChevronDown className="w-7 h-7" strokeWidth={1} />
-    </a>
-  )
-}
-{
-  !!prevSectionHref && (
-    <a
-      class="cursor-pointer absolute border border-border hover:border-white text-border hover:text-white transition-all rounded-full top-5 right-10 w-8 h-8 z-20 duration-300 animate-bounce flex justify-center items-center"
-      href={prevSectionHref}
-    >
-      <ChevronUp className="w-7 h-7" strokeWidth={1} />
-    </a>
-  )
-}

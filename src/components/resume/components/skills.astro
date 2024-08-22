@@ -1,14 +1,33 @@
 ---
 import Card from "../../../components/card/index.astro";
 import Pill from "../../../components/pill/index.astro";
+import { SKILLS } from "../../../utils/constants";
+import type { SkillCategory } from "../../../utils/types";
 ---
 
-<Card className="p-6 flex flex-col gap-3">
+<Card className="p-6 flex flex-col ">
   <h2 class="text-white font-sans text-lg md:text-2xl font-semibold">Skills</h2>
   <div>
-    <h3 class="text-white font-bold">Front End</h3>
-    <div class="flex flex-wrap gap-2">
-      <Pill> <code>JavaScript</code></Pill>
-    </div>
+    {
+      SKILLS.map((skill) => (
+        <div class="flex flex-col ">
+          <h3 class="text-white font-bold my-3">{skill.name}</h3>
+          <div class="flex gap-2 flex-wrap">
+            {skill.categories.map((category: SkillCategory) =>
+              category.skills.map((item) => (
+                <Pill className="w-fit text-nowrap relative group hover:bg-blue-700 cursor-help transition-all duration-300">
+                  <span class="border border-border rounded-3xl backdrop-blur-md bg-card shadow-transparent absolute left-1/2  transform -translate-x-1/2 bottom-full mb-2 text-center text-sm py-1 px-2 translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-nowrap text-white invisible group-hover:visible ">
+                    {category?.tooltip}
+                  </span>
+                  <code class="text-zinc-400 text-sm group-hover:text-white">
+                    {item}
+                  </code>
+                </Pill>
+              )),
+            )}
+          </div>
+        </div>
+      ))
+    }
   </div>
 </Card>

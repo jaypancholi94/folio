@@ -22,11 +22,6 @@ const { pathname } = Astro.url;
             />
           );
         }
-        console.log({
-          pathname,
-          isActive: !!(pathname === icon.path),
-          const_icon: icon.path,
-        });
         return (
           <Icon
             isActive={!!(pathname === icon.path)}

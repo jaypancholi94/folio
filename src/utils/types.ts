@@ -33,3 +33,13 @@ export type ContactProps = {
   hoverColor: string;
   href: string;
 };
+
+export type SkillCategory = {
+  tooltip: string;
+  skills: string[];
+};
+
+export type SkillGroup = {
+  name: string;
+  categories: SkillCategory[];
+};
