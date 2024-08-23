@@ -1,0 +1,14 @@
+---
+interface Props {
+  bgForrestLayer: string;
+  delay: string;
+}
+const { bgForrestLayer, delay } = Astro.props;
+console.log(bgForrestLayer, delay);
+---
+
+<div
+  class={`${bgForrestLayer} w-full bg-bottom bg-[length:auto_1038px] bg-repeat-x absolute h-[1000px] hue-rotate-180 animate-page-load`}
+  style={`animation-delay: ${delay}`}
+>
+</div>

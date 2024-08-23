@@ -1,0 +1,13 @@
+---
+import Layer from "./layer.astro";
+import { FOREST_LAYERS } from "../../utils/constants.ts";
+import type { ForrestLayerProps } from "../../utils/types.ts";
+---
+
+<div class="fixed w-full h-full">
+  {
+    FOREST_LAYERS.map(({ bgForestLayer, delay }: ForrestLayerProps) => (
+      <Layer bgForrestLayer={bgForestLayer} delay={delay} />
+    ))
+  }
+</div>

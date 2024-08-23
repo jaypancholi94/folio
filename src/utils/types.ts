@@ -43,3 +43,5 @@ export type SkillGroup = {
   name: string;
   categories: SkillCategory[];
 };
+
+export type ForrestLayerProps = { bgForestLayer: string; delay: string };
