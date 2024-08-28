@@ -10,16 +10,16 @@ import Skills from "../../components/resume/components/skills.astro";
 ---
 
 <Layout title="JP | About" description="Jay Pancholi | Muggle Born Dev">
-  <div class="bg-neutral-900 flex pb-32 px-5 md:px-0">
-    <div class="flex flex-col md:flex-row container mx-auto gap-6">
-      <div class="w-full md:w-1/3 md:py-6 pt-6 animate-page-load" id="profile">
+  <div class="flex bg-neutral-900 px-5 pb-32 md:px-0">
+    <div class="container mx-auto flex flex-col gap-6 md:flex-row">
+      <div class="w-full animate-page-load pt-6 md:w-1/3 md:py-6" id="profile">
         <div class="sticky top-6 flex flex-col gap-6">
           <Profile />
           <Skills />
         </div>
       </div>
       <div
-        class="w-full md:w-2/3 flex flex-col md:py-6 gap-6 animate-page-load opacity-0"
+        class="flex w-full animate-page-load flex-col gap-6 opacity-0 md:w-2/3 md:py-6"
         style="animation-delay: 200ms;"
       >
         <Inro />

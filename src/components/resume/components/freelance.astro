@@ -7,8 +7,8 @@ import type { JobProps, ResponsibilityProps } from "../../../utils/types";
 import Divider from "../../../components/divider/index.astro";
 ---
 
-<Card className="p-6 flex flex-col gap-3">
-  <h2 class="text-white font-sans text-lg md:text-2xl font-semibold">
+<Card className="flex flex-col gap-3 p-6">
+  <h2 class="font-sans text-lg font-semibold text-white md:text-2xl">
     Freelance Work
   </h2>
   {
@@ -33,9 +33,9 @@ import Divider from "../../../components/divider/index.astro";
                     className="font-bold text-sm"
                   />
                 )}
-                <ul class="list-disc list-outside">
+                <ul class="list-outside list-disc">
                   {responsibility.highlights.map((highlight: string) => (
-                    <li class="text-zinc-400 text-sm ml-5">{highlight}</li>
+                    <li class="ml-5 text-sm text-zinc-400">{highlight}</li>
                   ))}
                 </ul>
               </div>

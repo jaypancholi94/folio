@@ -5,21 +5,21 @@ import { SKILLS } from "../../../utils/constants";
 import type { SkillCategory } from "../../../utils/types";
 ---
 
-<Card className="p-6 flex flex-col ">
-  <h2 class="text-white font-sans text-lg md:text-2xl font-semibold">Skills</h2>
+<Card className="flex flex-col p-6">
+  <h2 class="font-sans text-lg font-semibold text-white md:text-2xl">Skills</h2>
   <div>
     {
       SKILLS.map((skill) => (
-        <div class="flex flex-col ">
-          <h3 class="text-white font-bold my-3">{skill.name}</h3>
-          <div class="flex gap-2 flex-wrap">
+        <div class="flex flex-col">
+          <h3 class="my-3 font-bold text-white">{skill.name}</h3>
+          <div class="flex flex-wrap gap-2">
             {skill.categories.map((category: SkillCategory) =>
               category.skills.map((item) => (
                 <Pill className="w-fit text-nowrap relative group hover:bg-blue-700 cursor-help transition-all duration-300">
-                  <span class="border border-border rounded-3xl backdrop-blur-md bg-card shadow-transparent absolute left-1/2  transform -translate-x-1/2 bottom-full mb-2 text-center text-sm py-1 px-2 translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-nowrap text-white invisible group-hover:visible ">
+                  <span class="invisible absolute bottom-full left-1/2 mb-2 -translate-x-1/2 translate-y-2 transform text-nowrap rounded-3xl border border-border bg-card px-2 py-1 text-center text-sm text-white opacity-0 shadow-transparent backdrop-blur-md transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
                     {category?.tooltip}
                   </span>
-                  <code class="text-zinc-400 text-sm group-hover:text-white">
+                  <code class="text-sm text-zinc-400 group-hover:text-white">
                     {item}
                   </code>
                 </Pill>

@@ -4,7 +4,7 @@ import { FOREST_LAYERS } from "../../utils/constants.ts";
 import type { ForrestLayerProps } from "../../utils/types.ts";
 ---
 
-<div class="fixed w-full h-full">
+<div class="fixed h-full w-full">
   {
     FOREST_LAYERS.map(({ bgForestLayer, delay }: ForrestLayerProps) => (
       <Layer bgForrestLayer={bgForestLayer} delay={delay} />

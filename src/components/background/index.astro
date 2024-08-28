@@ -1,14 +1,14 @@
 <div class="relative h-full w-full">
-  <div class="absolute top-0 left-0 right-0 bottom-0 z-0">
+  <div class="absolute bottom-0 left-0 right-0 top-0 z-0">
     <img
       src={"/background.png"}
       alt={"background image"}
-      class="block w-full h-full object-center object-cover opacity-40"
+      class="block h-full w-full object-cover object-center opacity-40"
       style={{ imageRendering: "auto" }}
     />
   </div>
-  <div class="absolute top-0 left-0 right-0 bottom-0 z-0"></div>
-  <div class="absolute h-screen w-screen max-h-[-webkit-fill-available]">
+  <div class="absolute bottom-0 left-0 right-0 top-0 z-0"></div>
+  <div class="absolute h-screen max-h-[-webkit-fill-available] w-screen">
     <slot />
   </div>
 </div>

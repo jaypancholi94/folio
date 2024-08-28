@@ -11,56 +11,51 @@ import Whitefox from "./companies/whitefox.astro";
 ---
 
 <div
-  class="w-screen h-screen flex flex-col justify-center items-center relative container m-auto md:px-0 px-6"
+  class="container relative m-auto flex h-screen w-screen flex-col items-center justify-center px-6 md:px-0"
 >
-  <h2 class="text-white
-  font-sans
-  text-xl
-  md:text-4xl
-  font-semibold
-  mb-8">
+  <h2 class="mb-8 font-sans text-xl font-semibold text-white md:text-4xl">
     You might have come across me or my work on...
   </h2>
   <div
-    class="grid md:grid-cols-3 grid-cols-2 md:gap-4 gap-8 justify-items-center"
+    class="grid grid-cols-2 justify-items-center gap-8 md:grid-cols-3 md:gap-4"
   >
     <a href={COMPANY_PATHS.tac} target="_blank">
-      <TAC className="md:h-16 h-12  w-auto fill-white" />
+      <TAC className="h-12 w-auto fill-white md:h-16" />
     </a>
     <a href={COMPANY_PATHS.solstice} target="_blank">
-      <Solstice className="md:h-16 h-12 w-auto fill-[#9646ff]" />
+      <Solstice className="h-12 w-auto fill-[#9646ff] md:h-16" />
     </a>
     <a href={COMPANY_PATHS.makeawish} target="_blank">
-      <MakeaWish className="md:h-16 h-12 w-auto fill-[#0055b7]" />
+      <MakeaWish className="h-12 w-auto fill-[#0055b7] md:h-16" />
     </a>
     <a href={COMPANY_PATHS.vicinity} target="_blank">
       <img
         src={"./company/vicinity.png"}
         alt="vicinity"
-        class="md:h-16 h-12 w-auto"
+        class="h-12 w-auto md:h-16"
       />
     </a>
     <a href={COMPANY_PATHS.amplar} target="_blank">
-      <Amplar className="md:h-16 h-12 w-auto" />
+      <Amplar className="h-12 w-auto md:h-16" />
     </a>
     <a href={COMPANY_PATHS.nandos} target="_blank">
-      <Nandos className="md:h-16 h-12 w-auto" />
+      <Nandos className="h-12 w-auto md:h-16" />
     </a>
     <a href={COMPANY_PATHS.inlight} target="_blank">
-      <Inlight className="md:h-16 h-12 w-auto" />
+      <Inlight className="h-12 w-auto md:h-16" />
     </a>
     <a href={COMPANY_PATHS.whitefox} target="_blank">
-      <Whitefox className="md:h-16 h-12 w-full" />
+      <Whitefox className="h-12 w-full md:h-16" />
     </a>
     <a href={COMPANY_PATHS["my-little-tag"]} target="_blank">
       <img
         src={"./company/my-little-tag.png"}
         alt="my-little-tag"
-        class="md:h-16 h-12 w-auto"
+        class="h-12 w-auto md:h-16"
       />
     </a>
     <a href={COMPANY_PATHS.swinburne} target="_blank">
-      <Swinburne className="md:h-16 h-12 w-auto" />
+      <Swinburne className="h-12 w-auto md:h-16" />
     </a>
   </div>
 </div>

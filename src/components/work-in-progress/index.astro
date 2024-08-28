@@ -4,27 +4,22 @@ import Cauldron from "./cauldron.astro";
 ---
 
 <div
-  class="relative h-full w-fit flex flex-col ${backgroundColor} w-full h-screen bg-black"
+  class="${backgroundColor} relative flex  h-screen w-fit  flex-col bg-black"
 >
   <Background>
     <div
-      class="h-full flex flex-col items-center justify-center w-1/2 m-auto text-center gap-6 -mt-8"
+      class="m-auto -mt-8 flex h-full w-1/2 flex-col items-center justify-center gap-6 text-center"
     >
       <Cauldron height="120" width="120" />
       <h1
-        class="text-white font-sans text-lg md:text-2xl font-semibold animate-page-load opacity-0"
+        class="animate-page-load font-sans text-lg font-semibold text-white opacity-0 md:text-2xl"
         style="animation-delay: 0.3s;"
       >
         Brewing some magic behind the scenes! This page is still under a
         powerful spell.
       </h1>
       <h2
-        class="text-white
-        font-sans
-        text-lg
-        md:text-xl
-        font-semibold
-        animate-page-load opacity-0"
+        class="animate-page-load font-sans text-lg font-semibold text-white opacity-0 md:text-xl"
         style="
         animation-delay:
         0.6s;"

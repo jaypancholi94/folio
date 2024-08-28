@@ -5,6 +5,6 @@ interface Props {
 const { className } = Astro.props;
 ---
 
-<div class:list={["bg-neutral-800 rounded-full border-border px-3", className]}>
+<div class:list={["rounded-full border-border bg-neutral-800 px-3", className]}>
   {(<slot />)}
 </div>

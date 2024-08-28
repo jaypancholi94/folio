@@ -22,7 +22,7 @@ const { backgroundColor, id, nextSectionHref, prevSectionHref } = Astro.props;
   {
     !!nextSectionHref && (
       <a
-        class="cursor-pointer absolute border border-border hover:border-white text-border hover:text-white transition-all rounded-full bottom-3 right-10 w-8 h-8 z-20 duration-300 animate-bounce flex justify-center items-center scroll-smooth"
+        class="absolute bottom-3 right-10 z-20 hidden h-8 w-8 animate-bounce cursor-pointer items-center justify-center scroll-smooth rounded-full border border-border text-border transition-all duration-300 hover:border-white hover:text-white md:flex"
         href={nextSectionHref}
       >
         <ChevronDown className="w-7 h-7" strokeWidth={1} />
@@ -32,7 +32,7 @@ const { backgroundColor, id, nextSectionHref, prevSectionHref } = Astro.props;
   {
     !!prevSectionHref && (
       <a
-        class="cursor-pointer absolute border border-border hover:border-white text-border hover:text-white transition-all rounded-full top-5 right-10 w-8 h-8 z-20 duration-300 animate-bounce flex justify-center items-center"
+        class="absolute right-10 top-5 z-20 hidden h-8 w-8 animate-bounce cursor-pointer items-center justify-center rounded-full border border-border text-border transition-all duration-300 hover:border-white hover:text-white md:flex"
         href={prevSectionHref}
       >
         <ChevronUp className="w-7 h-7" strokeWidth={1} />
