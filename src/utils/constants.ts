@@ -16,6 +16,7 @@ export const PATHS = {
   phone: "tel:+61(0)450691794",
   instagram: "https://www.instagram.com/_jaypancholi_/",
   facebook: "https://www.facebook.com/Jay.D.Pancholi/",
+  spellbook: "https://spellbook.muggleborn.dev/",
 };
 
 export const COMPANY_PATHS = {
@@ -62,6 +63,17 @@ export const DOCK_ICONS = [
     isExternalLink: false,
     animationDelay: "400ms",
   },
+  {
+    path: PATHS.spellbook,
+    bgColor: "bg-spellbook",
+    className: "hover:bg-spellbook hidden md:block animate-icon-load opacity-0",
+    tooltip: "SpellBook",
+    icon: "BookMarked",
+    type: "icon",
+    isExternalLink: true,
+    animationDelay: "550ms",
+  },
+
   {
     type: "divider",
     className: "hidden md:block h-6 w-[2px] animate-icon-load opacity-0",

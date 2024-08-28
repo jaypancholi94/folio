@@ -20,6 +20,7 @@ export default {
         smartphone: "#69cc7a",
         instagram: "#d62976",
         facebook: "#1e85ff",
+        spellbook: "#41a1af",
       },
       keyframes: {
         "page-load": {
