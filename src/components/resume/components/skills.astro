@@ -1,20 +1,20 @@
 ---
-import Card from "../../../components/card/index.astro";
-import Pill from "../../../components/pill/index.astro";
-import { SKILLS } from "../../../utils/constants";
-import type { SkillCategory } from "../../../utils/types";
+import Card from '../../../components/card/index.astro';
+import Pill from '../../../components/pill/index.astro';
+import { SKILLS } from '../../../constants';
+import type { SkillCategory } from '../../../utils/types';
 ---
 
 <Card className="flex flex-col p-6">
   <h2 class="font-sans text-lg font-semibold text-white md:text-2xl">Skills</h2>
   <div>
     {
-      SKILLS.map((skill) => (
+      SKILLS.map(skill => (
         <div class="flex flex-col">
           <h3 class="my-3 font-bold text-white">{skill.name}</h3>
           <div class="flex flex-wrap gap-2">
             {skill.categories.map((category: SkillCategory) =>
-              category.skills.map((item) => (
+              category.skills.map(item => (
                 <Pill className="w-fit text-nowrap relative group hover:bg-blue-700 cursor-help transition-all duration-300">
                   <span class="invisible absolute bottom-full left-1/2 mb-2 -translate-x-1/2 translate-y-2 transform text-nowrap rounded-3xl border border-border bg-card px-2 py-1 text-center text-sm text-white opacity-0 shadow-transparent backdrop-blur-md transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
                     {category?.tooltip}

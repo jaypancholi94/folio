@@ -1,8 +1,8 @@
 ---
-import Card from "../../../components/card/index.astro";
-import Link from "../../../components/link/index.astro";
-import { CONTACTS } from "../../../utils/constants";
-import type { ContactProps } from "../../../utils/types";
+import Card from '../../../components/card/index.astro';
+import Link from '../../../components/link/index.astro';
+import { CONTACTS } from '../../../constants';
+import type { ContactProps } from '../../../utils/types';
 ---
 
 <Card className="flex flex-col gap-3 p-6">
@@ -14,7 +14,7 @@ import type { ContactProps } from "../../../utils/types";
       CONTACTS.map((contact: ContactProps) => (
         <Link
           iconName={contact.iconName}
-          iconPosition={"prefix"}
+          iconPosition={'prefix'}
           title={contact.title}
           className={`w-full cursor-pointer text-white transition-all duration-300 ${contact.hoverColor} px-5 py-4`}
           iconStrokeWidth={2}

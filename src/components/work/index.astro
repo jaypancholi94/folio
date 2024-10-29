@@ -1,13 +1,13 @@
 ---
-import { COMPANY_PATHS } from "../../utils/constants.ts";
-import TAC from "./companies/tac.astro";
-import Solstice from "./companies/solstice.astro";
-import MakeaWish from "./companies/make-a-wish.astro";
-import Amplar from "./companies/amplar.astro";
-import Nandos from "./companies/nandos.astro";
-import Inlight from "./companies/inlight.astro";
-import Swinburne from "./companies/swinburne.astro";
-import Whitefox from "./companies/whitefox.astro";
+import TAC from './companies/tac.astro';
+import { COMPANY_PATHS } from '../../constants';
+import Solstice from './companies/solstice.astro';
+import MakeaWish from './companies/make-a-wish.astro';
+import Amplar from './companies/amplar.astro';
+import Nandos from './companies/nandos.astro';
+import Inlight from './companies/inlight.astro';
+import Swinburne from './companies/swinburne.astro';
+import Whitefox from './companies/whitefox.astro';
 ---
 
 <div
@@ -30,7 +30,7 @@ import Whitefox from "./companies/whitefox.astro";
     </a>
     <a href={COMPANY_PATHS.vicinity} target="_blank">
       <img
-        src={"./company/vicinity.png"}
+        src={'./company/vicinity.png'}
         alt="vicinity"
         class="h-12 w-auto md:h-16"
       />
@@ -47,9 +47,9 @@ import Whitefox from "./companies/whitefox.astro";
     <a href={COMPANY_PATHS.whitefox} target="_blank">
       <Whitefox className="h-12 w-full md:h-16" />
     </a>
-    <a href={COMPANY_PATHS["my-little-tag"]} target="_blank">
+    <a href={COMPANY_PATHS['my-little-tag']} target="_blank">
       <img
-        src={"./company/my-little-tag.png"}
+        src={'./company/my-little-tag.png'}
         alt="my-little-tag"
         class="h-12 w-auto md:h-16"
       />
