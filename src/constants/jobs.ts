@@ -50,7 +50,7 @@ export const JOBS: JobProps[] = [
           title: 'Vicinity',
           highlights: [
             'Enhanced UI/UX by implementing front-end tweaks using React and Storyblok CMS',
-            'Developed a custom plugin in Vite.js for Storyblok to automate promotions based on date and time logic',
+            'Developed a custom plugin in Vue.js for Storyblok to automate promotions based on date and time logic',
             'Wrote a Python script to bulk modify/remove unused fields in the mall database',
           ],
         },
