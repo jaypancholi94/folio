@@ -7,7 +7,7 @@ export const JOBS: JobProps[] = [
     website: COMPANY_PATHS.inlight,
     role: 'Full Stack Developer',
     linkHoverColor: 'hover:!bg-inlight',
-    duration: '2021 - Current',
+    duration: '2021 - 2023',
     description: {
       overview:
         'Worked closely with Inlight team using agile methodology to deliver high-quality solutions to clients. Proficient in front-end and back-end development, CMS management, UI/UX enhancements, and ensuring accessibility standards. Experienced in writing thorough documentation, conducting tests, and maintaining robust systems across various projects',
