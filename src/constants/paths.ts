@@ -12,6 +12,7 @@ export const PATHS = {
 };
 
 export const COMPANY_PATHS = {
+  'exco-partners': 'https://excopartners.com/',
   tac: 'https://howsafeisyourcar.com.au/',
   solstice: 'https://www.solsticeenergy.com.au/',
   makeawish: 'https://www.makeawish.org.au/',

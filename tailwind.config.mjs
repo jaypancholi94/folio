@@ -13,6 +13,7 @@ export default {
         border: '#ffffff1a',
         github: '#2b3137',
         inlight: '#fc553f',
+        'exco-partners': '#fab815',
         whitefox: '#64656a',
         mylittletag: '#FF0066',
         vercel: '#ededed',

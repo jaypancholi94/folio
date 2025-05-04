@@ -3,6 +3,31 @@ import type { JobProps } from '../utils/types';
 
 export const JOBS: JobProps[] = [
   {
+    company: 'Exco Partners',
+    website: COMPANY_PATHS['exco-partners'],
+    role: 'Full Stack Developer',
+    linkHoverColor: 'hover:!bg-exco-partners',
+    duration: '2023 - Present',
+    description: {
+      overview: `🚀 Currently contributing to the Fair Work Commission's Customer Service Platform, focused on modernising and enhancing the user experience for Australian workers and employers.`,
+      responsibilities: [
+        {
+          title: 'Fair Work Commission',
+          highlights: [
+            'Led architectural planning for the frontend and CRM integration — helped define how dynamic form data is structured and stored in Dataverse, aligning with long-term platform goals.',
+            'Led UI modernisation using Material UI for improved accessibility and visual consistency.',
+            'Built schema-driven forms with React Hook Form + Zod, enabling scalable and reusable validation logic.',
+            'Integrated with Data-verse CRM using OData and REST APIs for robust backend communication.',
+            'Refactored into a modular component architecture using field-level meta for dynamic rendering and better DX.',
+            'Implemented React Query to manage API data fetching, caching, and synchronisation with minimal boilerplate.',
+            'Wrote unit tests with Vitest to ensure reliability and maintainability across shared components and utilities.',
+            'Developed reusable field components driven by schema and context, reducing duplication and improving dev velocity.',
+          ],
+        },
+      ],
+    },
+  },
+  {
     company: 'inlight',
     website: COMPANY_PATHS.inlight,
     role: 'Full Stack Developer',
